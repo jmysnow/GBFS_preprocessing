@@ -5,10 +5,15 @@ The following instructions are for ```Trip length search.py```
     The script works for [Python 3](https://www.python.org/downloads/) and is used to find the trip distances offline </p>*
     
 ###### <p style="text-align: right;"> Mengying Ju </p>
-###### <p style="text-align: right;"> May 8, 2020 </p>
+###### <p style="text-align: right;"> May 19, 2020 </p>
 
 
 ## Introduction
+
+> To find the trip distances from a given origin/destination pair, [Google Maps](https://www.google.com/maps) does a great job in telling us how far it is and how long it takes. However, it is not feasible to use API when the number of queries is huge.
+> 
+> An offline approach using the shortest path algorithm is therefore developed to avoid [```OVER_QUERY_LIMIT```](https://developers.google.com/maps/premium/previous-licenses/articles/usage-limits).
+
 This script can - 
 * Extract the road network in your interest area from [OpenStreetMap](https://www.openstreetmap.org/).
 * Filter the trips with both origins and destinations inside your interest area.
@@ -26,7 +31,7 @@ Here are the things to pay attention to before you get started.
     * **[networkx](https://pypi.org/project/networkx/)**: To help find the shortest path
     * **[geopandas](https://pypi.org/project/geopandas/)**: To store great amount of shape objects into data frames
     * **[shapely](https://pypi.org/project/Shapely/)**: To work with shapefiles in Python 3
--	Set the ```cityname```, ```place_query``` and ```apikey``` in *line 24*, *31* and *line 34*.
+-	Set the ```cityname```, ```place_query``` and ```apikey``` in *[line 24](https://github.com/jmysnow/GBFS_preprocessing/blob/87043a6a3e110509e9d683b342d8a5de14263bd2/Trip%20length%20search.py#L24)*, *[line 31](https://github.com/jmysnow/GBFS_preprocessing/blob/87043a6a3e110509e9d683b342d8a5de14263bd2/Trip%20length%20search.py#L31)* and *[line 34](https://github.com/jmysnow/GBFS_preprocessing/blob/87043a6a3e110509e9d683b342d8a5de14263bd2/Trip%20length%20search.py#L34)*.
     -	**cityname**:
         -	The name of the city that you want to do analysis on
         - Make sure the city exists in your generated “Datafiles by city” folder as "<city name>.csv". For example, 'San Francisco.csv'
