@@ -26,7 +26,7 @@ Here are the things to pay attention to before you get started.
 -	Keep the .py file in the **same folder** of your datafile
 -	The script only works for the trips with both origins and destinations inside your interest city.
 -	Make sure you have activated “[Elevation](https://developers.google.com/maps/documentation/elevation/start)” API in your [Google Cloud Console](https://console.cloud.google.com/).
--	Make sure you have packages to be imported in this script installed (pandas, numpy, matplotlib, osmnx, networkx, geopandas, shapely...)
+-	Make sure you have packages to be imported in this script installed ([pandas](https://pypi.org/project/pandas/), [numpy](https://pypi.org/project/numpy/), [matplotlib](https://pypi.org/project/matplotlib/), osmnx, networkx, geopandas, and shapely). Below is a brief introduction of how the important packages work.
     * **[osmnx](https://pypi.org/project/osmnx/)**: To extract [OpenStreetMap](https://www.openstreetmap.org/) network
     * **[networkx](https://pypi.org/project/networkx/)**: To help find the shortest path
     * **[geopandas](https://pypi.org/project/geopandas/)**: To store great amount of shape objects into data frames
