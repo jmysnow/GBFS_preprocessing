@@ -1,10 +1,7 @@
 # *Trip length search* Instructions
-*<p style="text-align: center;"> 
-The following instructions are for ```Trip length search.py```</p>*
-*<p style="text-align: center;">     
-Run the script only after running ```Trip search_dynamic.py```</p>*
-*<p style="text-align: center;">   
-    The script works for [Python 3](https://www.python.org/downloads/) and is used to find the trip distances offline </p>*
+*<p style="text-align: center;"> The following instructions are for ```Trip length search.py```</p>*
+*<p style="text-align: center;"> Run the script only after running ```Trip search_dynamic.py```</p>*
+*<p style="text-align: center;"> The script works for [Python 3](https://www.python.org/downloads/) and is used to find the trip distances offline </p>*
     
 ###### <p style="text-align: right;"> Mengying Ju </p>
 ###### <p style="text-align: right;"> May 19, 2020 </p>
