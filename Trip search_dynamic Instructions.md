@@ -1,17 +1,19 @@
 # *Trip search_dynamic* Instructions
 
 *<p style="text-align: center;"> 
-The following instructions are for ```Trip search_dynamic.py```
-    The script works for [Python 3](https://www.python.org/downloads/) and is used for **MDS** data preprocessing </p>*
+The following instructions are for ```Trip search_dynamic.py``` </p>*
+*<p style="text-align: center;">  The script works for [Python 3](https://www.python.org/downloads/) and is used for **MDS** data preprocessing </p>*
+    
     
 ###### <p style="text-align: right;"> Mengying Ju </p>
-###### <p style="text-align: right;"> May 10, 2020 </p>
+###### <p style="text-align: right;"> May 19, 2020 </p>
 
 
 
 ## Introduction
 
-> Bikesharing systems post information on GBFS feeds.  This information when appropriately organized has trip data. The problem is that the timestamps are in Unix time, which is unusable. 
+> Bikesharing systems post information on [GBFS (General Bikeshare Feed Specification)](https://github.com/NABSA/gbfs) feeds.  This information when appropriately organized has trip data. The problem is that the timestamps are in Unix time, which is unusable. 
+>
 > This script coverts those Unix times into local times.  Furthermore, input files usually have many operators and cities mixed together.  This scripts splits each operator data into separate files.
 
 This script can - 
@@ -22,13 +24,17 @@ This script can -
 
  
 ## Attentions 
-1. Keep the .py file in the **same folder** of your datafile.
-2. Make sure the datafile comes without headers, otherwise comment out *line 114*.
-3. Make sure you have an Google API key and have activated "[Timezone](https://developers.google.com/maps/documentation/timezone/start)" and "[Geocode](https://developers.google.com/maps/documentation/geocoding/start)" API in your [Google Cloud Console](https://console.cloud.google.com/). 
-4. Set the ```filename``` and ```apikey``` in *line 19* and *20*.
+- Keep the .py file in the **same folder** of your datafile.
+- Make sure the datafile comes without headers, otherwise comment out *[line 114](https://github.com/jmysnow/GBFS_preprocessing/blob/dd43429ea3038f31559f075846f6b41b57616e1a/Trip%20search_dynamic.py#L114)*.
+-	Make sure you have packages to be imported in this script installed ([pandas](https://pypi.org/project/pandas/), [numpy](https://pypi.org/project/numpy/), [matplotlib](https://pypi.org/project/matplotlib/), [pytz](https://pypi.org/project/pytz/), [gmaps](https://pypi.org/project/gmaps/), [requests](https://pypi.org/project/requests/), json, os, and time). Below is a brief introduction of how the important packages work.
+    * **[pytz](https://pypi.org/project/pytz/)**: To convert UTC time to local time given a specific time zone.
+    * **[requests](https://pypi.org/project/requests/)**: To pull json data using Google Maps API.
+
+- Make sure you have an Google API key and have activated "[Timezone](https://developers.google.com/maps/documentation/timezone/start)" and "[Geocode](https://developers.google.com/maps/documentation/geocoding/start)" API in your [Google Cloud Console](https://console.cloud.google.com/). 
+- Set the ```filename``` and ```apikey``` in *[line 19](https://github.com/jmysnow/GBFS_preprocessing/blob/dd43429ea3038f31559f075846f6b41b57616e1a/Trip%20search_dynamic.py#L19)* and *[line 20](https://github.com/jmysnow/GBFS_preprocessing/blob/dd43429ea3038f31559f075846f6b41b57616e1a/Trip%20search_dynamic.py#L20)*.
     * The ```filename``` is the name of your .csv file.
     * The ```apikey``` is your Google API key.
-5. The whole script takes about **20min** to run in a **64-bit 8GB i7** laptop, but it takes shorter in a computer with a bigger memory storage.
+- The whole script takes about **20min** to run in a **64-bit 8GB i7** laptop, but it takes shorter in a computer with a bigger memory storage.
 
 ## Classes and functionalities
 The script includes two classes.
